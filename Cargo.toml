@@ -1,0 +1,6 @@
+[package]
+name = "cacher"
+version = "0.1.0"
+authors = ["Tucker Lein <self@tuckerle.in>"]
+
+[dependencies]
