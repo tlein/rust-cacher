@@ -9,9 +9,10 @@ fn main() {
     let mut expensive_result = Cacher::new(|num| {
         println!("calculating slowly...");
         thread::sleep(Duration::from_secs(2));
-        num
+        *num
     });
 
     println!("Today, do {} pushups", expensive_result.value(10));
     println!("Next, do {} situps", expensive_result.value(8));
+    println!("Finally, do {} pullups", expensive_result.value(10));
 }
